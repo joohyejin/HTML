@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>canvas</h1>
+    <canvas id="my canvas width="200" height="100" style="border:1px solid black ">
+    </canvas>
+    <p>canvas는 canvas 태그를 이용하여 위치를 지정하고 그 안에는 JS를 이용하여 관련 그림, 그래픽을 넣을 수 있다<br>
+    픽셀로 화면에 출력되기에 확대하면 계단현상이 일어난다<br>
+    canvas를 이용하여 애니메이션 형식으로도 만들 수 있다</p>
+    <script>
+
+        let paper=document.getElementById("my canvas");
+        let context=paper.getContext("2d")
+        context.fillStyle="#00FF00";
+        context.fillRect(0,0,150,75);
+        context.fillStyle="#0000FF";
+        context.fillRect(10,10,150,75);width="200";  height="100";
+
+        context.strokeStyle="#000000";
+        context.moveTo(0,0);
+        context.lineTo(200,100);
+        context.stroke();
+        context.moveTo(200,0);
+        context.lineTo(0,100);
+        context.stroke()
+        context.fillStyle="#FFFF00";
+        context.fillText("Hello",10,50);
+        context.font="30px Arial";
+        context.strokeText("Hi",10,75)
+        /*
+        자바스크립트는 위에서 아래로 실행된다
+        .명령어() : 이 형태를 통해 명령어를 실행할 수 있다
+        let 변수이름 = 값 : 값을 변수에 담아서 사용한다
+        */
+        //그라디언트 생성
+        let grd = context.creatRadialGradient(75,50,5,90,60,100);
+        grd.addcolorstop(0,"red");
+        grd.addcolorstop(1,"yellow")
+        context.fillStyle = grd;
+        context.fillRect(10,10,150,80)
+        //그라디언트 사용
+    </script>
+</body>
+</html>

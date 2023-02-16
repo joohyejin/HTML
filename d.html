@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <canvas id="paper" width="200" height="150" style="border: 1px black solid;"></canvas>
+
+    <script>
+
+        let canvas=document.getElementById("paper");
+
+        let context=canvas.getContext("2d");
+
+        context.fillStyle="#00FF00";
+
+        context.fillRect(10,10,150,120)
+
+        context.moveTo(0,0);
+
+        context.lineTo(200,150);
+
+        context.stroke()
+
+        context.fillText("Hello World",10,60);
+
+        context.strokeText("Hello World",10,60);
+
+        
+
+        let grd=context.createRadialGradient(75,50,5,90,60,100);
+
+        grd.addColorStop(0,"red");
+
+        grd.addColorStop(1,"white");
+
+        
+
+        context.fillStyle=grd;
+
+        context.fillRect(10,10,150,80);
+
+        
+
+        let ld=creatLinearGradient(0,150,200,0);
+
+        id.addColorStop(0,"green");
+
+        id.addColorStop(1,"white");
+
+        
+
+        context.fillStyle=ld;
+
+        context.fillRect(0,150,200,0);
+
+        
+
+        
+
+        </script>
+
+        <svg width="200" height="150" style="border: 1px solid black;">
+
+            <line x1="50" y1="50" x2="200" y2="150" stroke="orange" ></line>
+
+        </svg>
+
+</body>
+
+</html>

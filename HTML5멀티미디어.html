@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML5 멀티미디어</h1>
+    <h2>video</h2>
+    <video src="./video/짧은 캔 광고.mp4" style="width: 576px; height: 360px;" controls autoplay loop muted></video>
+    <p>
+        controls : 플레이 버튼과 남은시간, 소리 표시 <br>
+        autoplay : 자동실행 (단, muted상태일때만 자동실행됨)<br>
+        muted : 무음 <br>
+        loop : 반복재생
+    </p>
+    <h1>플러그인</h1>
+    <h2>object</h2>
+    <object data="./data/3일차 HTML5.pdf" type=""></object><br>
+    <object data="./img/네이버로고.jpg" type=""></object>
+    <p>object태그는 타양한 파일들을 화면에 출력하는 태그이다</p>
+    <h2>embed</h2>
+    <embed src="./data/3일차 HTML5.pdf" type=""><br>
+    <embed src="./img/네이버로고.jpg" type="">
+    <p> embed태그는 object와 동일하게 사용할 수 있다<br>
+        embed태그를 사용하는게 좋다
+    </p>
+
+    <h2>유튜브 영상 삽입하기</h2>
+    <iframe width="576px" height="315" src="https://www.youtube.com/embed/4NBHT7_Q4Rc?mute=1&autoplay=1" title="감성커피 겨울시즌 신메뉴 출시 (풀영상)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <p>소스코드로 복사해오면 iframe안에 설정이 되어서 들고올 수 있다</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4NBHT7_Q4Rc?controls=0?mute=1&autoplay=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <p>
+        video의 설정을 유튜브에서도 적용할 수 있다<br>
+        url뒤에 ?를 이용한 쿼리스트링으로 작성할 수 있다 <br>
+        ?mute=1&autoplay=1 같은 값으로 들어간다 <br>
+        1은 true 참이라는 값으로 사용, 0은 false 거짓이라는 값으로 사용된다
+    </p>
+
+    <h1>멀티미디어 실습</h1>
+    <h1>현재 인기있는 영상</h1>
+    <table>
+        <tr>
+            <td><iframe width="200" height="130" src="https://www.youtube.com/embed/js1CtxSY38I?mute=1&autoplay=1&controls=0" title="NewJeans (뉴진스) 'Attention' Official MV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+            <td><iframe width="200" height="130" src="https://www.youtube.com/embed/js1CtxSY38I?controls=0" title="NewJeans (뉴진스) 'Attention' Official MV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></iframe></td>
+            <td><iframe width="200" height="130" src="https://www.youtube.com/embed/js1CtxSY38I?mute=1&autoplay=1&loop=1" title="NewJeans (뉴진스) 'Attention' Official MV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></td>
+            <td><iframe width="200" height="130" src="https://www.youtube.com/embed/js1CtxSY38I" title="NewJeans (뉴진스) 'Attention' Official MV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></iframe></td>
+        </tr>
+        <tr>
+            <td>1위</td>
+            <td>2위</td>
+            <td>3위</td>
+            <td>4위</td>
+        </tr>
+    </table>
+</body>
+</html>
