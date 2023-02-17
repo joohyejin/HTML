@@ -1,5 +1,42 @@
-<html>
-    <body>
-        <h1>안녕 환영합니다</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./img/user-solid.svg">
+</head>
+<body>
+    <canvas id="my canvas" style="border: solid" width="400px"
+    height="300px"></canvas>
+    <script>
+        var paper=document.getElementById("my canvas")
+        var context=paper.getContext("2d")
+
+        context.fillStyle="#00FF00";
+        context.fillRect(0,0,150,75);
+
+        context.moveTo(0,0)
+        context.lineTo(400,300)
+        context.stroke()
+
+        context.fillText("hello world",10,50)
+        context.strokeText("hello world",10,50)
+
+        var grd=context.createRadialGradient(75,50,5,90,60,100);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        
+        context.fillStyle=grd;
+        context.fillRect(100,50,150,200);
+
+        grd.addColorStop(0,"green");
+        grd.addColorStop(1,"white");
+
+        context.fillStyle=grd;
+        context.fillRect(20,20,200,100);
+
+    </script>
+</body>
 </html>
